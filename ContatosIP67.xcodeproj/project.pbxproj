@@ -19,6 +19,10 @@
 		54179F4C19B1FE6100B0AC19 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54179F3419B1FE6100B0AC19 /* UIKit.framework */; };
 		54179F5419B1FE6100B0AC19 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54179F5219B1FE6100B0AC19 /* InfoPlist.strings */; };
 		54179F5619B1FE6100B0AC19 /* ContatosIP67Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54179F5519B1FE6100B0AC19 /* ContatosIP67Tests.m */; };
+		54179F6219B1FEC600B0AC19 /* FormularioContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54179F6019B1FEC600B0AC19 /* FormularioContatoViewController.m */; };
+		54179F6319B1FEC600B0AC19 /* FormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54179F6119B1FEC600B0AC19 /* FormularioContatoViewController.xib */; };
+		54179F6619B2137100B0AC19 /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = 54179F6519B2137100B0AC19 /* Contato.m */; };
+		54179F6919B2459F00B0AC19 /* ListaContatosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54179F6819B2459F00B0AC19 /* ListaContatosViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,13 @@
 		54179F5119B1FE6100B0AC19 /* ContatosIP67Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ContatosIP67Tests-Info.plist"; sourceTree = "<group>"; };
 		54179F5319B1FE6100B0AC19 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		54179F5519B1FE6100B0AC19 /* ContatosIP67Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContatosIP67Tests.m; sourceTree = "<group>"; };
+		54179F5F19B1FEC600B0AC19 /* FormularioContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormularioContatoViewController.h; sourceTree = "<group>"; };
+		54179F6019B1FEC600B0AC19 /* FormularioContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormularioContatoViewController.m; sourceTree = "<group>"; };
+		54179F6119B1FEC600B0AC19 /* FormularioContatoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormularioContatoViewController.xib; sourceTree = "<group>"; };
+		54179F6419B2137100B0AC19 /* Contato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contato.h; sourceTree = "<group>"; };
+		54179F6519B2137100B0AC19 /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
+		54179F6719B2459F00B0AC19 /* ListaContatosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaContatosViewController.h; sourceTree = "<group>"; };
+		54179F6819B2459F00B0AC19 /* ListaContatosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaContatosViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +122,13 @@
 				54179F4019B1FE6100B0AC19 /* AppDelegate.m */,
 				54179F4219B1FE6100B0AC19 /* Images.xcassets */,
 				54179F3719B1FE6100B0AC19 /* Supporting Files */,
+				54179F5F19B1FEC600B0AC19 /* FormularioContatoViewController.h */,
+				54179F6019B1FEC600B0AC19 /* FormularioContatoViewController.m */,
+				54179F6119B1FEC600B0AC19 /* FormularioContatoViewController.xib */,
+				54179F6419B2137100B0AC19 /* Contato.h */,
+				54179F6519B2137100B0AC19 /* Contato.m */,
+				54179F6719B2459F00B0AC19 /* ListaContatosViewController.h */,
+				54179F6819B2459F00B0AC19 /* ListaContatosViewController.m */,
 			);
 			path = ContatosIP67;
 			sourceTree = "<group>";
@@ -220,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54179F3B19B1FE6100B0AC19 /* InfoPlist.strings in Resources */,
+				54179F6319B1FEC600B0AC19 /* FormularioContatoViewController.xib in Resources */,
 				54179F4319B1FE6100B0AC19 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,8 +258,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54179F6619B2137100B0AC19 /* Contato.m in Sources */,
 				54179F4119B1FE6100B0AC19 /* AppDelegate.m in Sources */,
+				54179F6919B2459F00B0AC19 /* ListaContatosViewController.m in Sources */,
 				54179F3D19B1FE6100B0AC19 /* main.m in Sources */,
+				54179F6219B1FEC600B0AC19 /* FormularioContatoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

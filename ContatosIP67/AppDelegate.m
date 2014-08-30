@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ListaContatosViewController.h"
 
 @implementation AppDelegate
 
@@ -14,6 +15,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    ListaContatosViewController *lista = [[ListaContatosViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:lista];
+    nav.navigationBar.translucent = NO;
+    self.window.rootViewController = nav;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
