@@ -20,6 +20,7 @@
         UIBarButtonItem *botaoExibirFormulario = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(exibeFormulario)];
         
         self.navigationItem.rightBarButtonItem = botaoExibirFormulario;
+        self.navigationItem.leftBarButtonItem = self.editButtonItem;
     }
     return self;
 }
@@ -58,6 +59,13 @@
     Contato *contato = [self.contatos objectAtIndex:indexPath.row];
     cell.textLabel.text = contato.nome;
     return cell;
+}
+
+- (void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self.contatos removeObjectAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 @end
