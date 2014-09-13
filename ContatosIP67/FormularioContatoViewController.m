@@ -18,7 +18,6 @@
 - (id) init{
     self = [super init];
     if (self){
-        self.contatos = [[NSMutableArray alloc] init];
         self.navigationItem.title = @"Cadastro";
         
         UIBarButtonItem *cancela = [[UIBarButtonItem alloc]initWithTitle:@"Cancela" style:UIBarButtonItemStylePlain target:self action:@selector(escondeFormulario)];

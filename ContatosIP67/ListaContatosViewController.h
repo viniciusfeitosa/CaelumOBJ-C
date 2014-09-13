@@ -10,4 +10,6 @@
 
 @interface ListaContatosViewController : UITableViewController
 
+@property (strong) NSMutableArray *contatos;
+
 @end

@@ -16,11 +16,23 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     ListaContatosViewController *lista = [[ListaContatosViewController alloc] init];
+    
+    NSArray *userDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDir = userDirs[0];
+    self.arquivoContatos = [NSString stringWithFormat:@"%@/ArquivoContatos",documentDir];
+    
+    self.contatos = [NSKeyedUnarchiver unarchiveObjectWithFile:self.arquivoContatos];
+    if (!self.contatos){
+        self.contatos = [[NSMutableArray alloc] init];
+    }
+    
+    lista.contatos = self.contatos;
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:lista];
     nav.navigationBar.translucent = NO;
     self.window.rootViewController = nav;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -32,8 +44,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [NSKeyedArchiver archiveRootObject:self.contatos toFile:self.arquivoContatos];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
