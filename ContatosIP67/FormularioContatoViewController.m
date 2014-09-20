@@ -33,6 +33,10 @@
     self = [super init];
     if (self) {
         self.contato = umContato;
+        
+        UIBarButtonItem *confirmar = [[UIBarButtonItem alloc]initWithTitle:@"Confirmar" style:UIBarButtonItemStylePlain target:self action:@selector(atualizaContato)];
+        
+        self.navigationItem.rightBarButtonItem = confirmar;
     }
     return self;
 }
@@ -94,13 +98,22 @@
 }
 
 - (Contato *)pegaDadosDoFormulario {
-    Contato *contato = [[Contato alloc]init];
-    contato.nome = self.nome.text;
-    contato.telefone = self.telefone.text;
-    contato.email = self.email.text;
-    contato.endereco = self.endereco.text;
-    contato.site = self.site.text;
+    if (!self.contato){
+        self.contato = [[Contato alloc]init];
+    }
+    self.contato.nome = self.nome.text;
+    self.contato.telefone = self.telefone.text;
+    self.contato.email = self.email.text;
+    self.contato.endereco = self.endereco.text;
+    self.contato.site = self.site.text;
     
-    return contato;
+    return self.contato;
 }
+
+- (void)atualizaContato{
+    [self pegaDadosDoFormulario];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 @end

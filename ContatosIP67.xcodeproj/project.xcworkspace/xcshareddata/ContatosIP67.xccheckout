@@ -10,24 +10,36 @@
 	<string>ContatosIP67</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>BEFD663A40F6A29DAB1468FC3A18F29DF95B73A9</key>
+		<string>github.com:viniciusfeitosa/CaelumOBJ-C.git</string>
 		<key>E727AF80-81EF-4F3F-83EC-FA076871071B</key>
 		<string>ssh://github.com/viniciusfeitosa/CaelumOBJ-C.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ContatosIP67.xcodeproj/project.xcworkspace</string>
+	<string>ContatosIP67.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>E727AF80-81EF-4F3F-83EC-FA076871071B</key>
+		<key>BEFD663A40F6A29DAB1468FC3A18F29DF95B73A9</key>
 		<string>../..</string>
+		<key>E727AF80-81EF-4F3F-83EC-FA076871071B</key>
+		<string>../../../ContatosIP67</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/viniciusfeitosa/CaelumOBJ-C.git</string>
+	<string>github.com:viniciusfeitosa/CaelumOBJ-C.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>E727AF80-81EF-4F3F-83EC-FA076871071B</string>
+	<string>BEFD663A40F6A29DAB1468FC3A18F29DF95B73A9</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BEFD663A40F6A29DAB1468FC3A18F29DF95B73A9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CaelumOBJ-C</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
