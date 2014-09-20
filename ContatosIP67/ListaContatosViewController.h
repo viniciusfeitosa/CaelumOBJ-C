@@ -9,9 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "ListaContatosProtocol.h"
 
-@interface ListaContatosViewController : UITableViewController<ListaContatosProtocol>
+@interface ListaContatosViewController : UITableViewController<ListaContatosProtocol, UIActionSheetDelegate>{
+    Contato *contatoSelecionado;
+}
 
 @property (strong) NSMutableArray *contatos;
 @property NSInteger linhaDestaque;
+
+-(void)exibeMaisAcoes: (UIGestureRecognizer *)gesture;
 
 @end

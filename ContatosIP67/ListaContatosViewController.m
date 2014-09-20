@@ -95,4 +95,30 @@
     }
 }
 
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(exibeMaisAcoes:)];
+    [self.tableView addGestureRecognizer:longPress];
+}
+
+- (void)exibeMaisAcoes:(UIGestureRecognizer *)gesture{
+    if (gesture.state == UIGestureRecognizerStateBegan) {
+        CGPoint ponto = [gesture locationInView:self.tableView];
+        NSIndexPath *index = [self.tableView indexPathForRowAtPoint:ponto];
+        
+        Contato *contato = self.contatos[index.row];
+        
+        contatoSelecionado = contato;
+        
+        UIActionSheet *opcoes = [[UIActionSheet alloc]initWithTitle:contato.nome delegate:self cancelButtonTitle:@"Cancelar" destructiveButtonTitle:nil otherButtonTitles:@"Ligar", @"Enviar Email", @"Visualizar Site", @"Abrir mapa" , nil];
+        
+        [opcoes showInView:self.view];
+    }
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+}
+
 @end
