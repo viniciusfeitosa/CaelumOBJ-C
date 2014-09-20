@@ -23,6 +23,7 @@
 		54179F6319B1FEC600B0AC19 /* FormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54179F6119B1FEC600B0AC19 /* FormularioContatoViewController.xib */; };
 		54179F6619B2137100B0AC19 /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = 54179F6519B2137100B0AC19 /* Contato.m */; };
 		54179F6919B2459F00B0AC19 /* ListaContatosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54179F6819B2459F00B0AC19 /* ListaContatosViewController.m */; };
+		54F49B6619CE003A001C0821 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F49B6519CE003A001C0821 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		54179F6719B2459F00B0AC19 /* ListaContatosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaContatosViewController.h; sourceTree = "<group>"; };
 		54179F6819B2459F00B0AC19 /* ListaContatosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaContatosViewController.m; sourceTree = "<group>"; };
 		545C855219CDCDB600B77E3A /* ListaContatosProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListaContatosProtocol.h; sourceTree = "<group>"; };
+		54F49B6519CE003A001C0821 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54F49B6619CE003A001C0821 /* MessageUI.framework in Frameworks */,
 				54179F3319B1FE6100B0AC19 /* CoreGraphics.framework in Frameworks */,
 				54179F3519B1FE6100B0AC19 /* UIKit.framework in Frameworks */,
 				54179F3119B1FE6100B0AC19 /* Foundation.framework in Frameworks */,
@@ -108,6 +111,7 @@
 		54179F2F19B1FE6100B0AC19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				54F49B6519CE003A001C0821 /* MessageUI.framework */,
 				54179F3019B1FE6100B0AC19 /* Foundation.framework */,
 				54179F3219B1FE6100B0AC19 /* CoreGraphics.framework */,
 				54179F3419B1FE6100B0AC19 /* UIKit.framework */,

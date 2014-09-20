@@ -118,7 +118,67 @@
 }
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
-    
+    switch (buttonIndex) {
+        case 0:
+            [self ligar];
+            break;
+        case 1:
+            [self enviarEmail];
+            break;
+        case 2:
+            [self abrirSite];
+            break;
+        case 3:
+            [self mostrarMapa];
+            break;
+        default:
+            break;
+    }
 }
+
+-(void)abrirApplicativoComUrl:(NSString *)url{
+    [[UIApplication sharedApplication]openURL:[NSURL URLWithString:url]];
+}
+
+-(void)ligar{
+    UIDevice *device = [UIDevice currentDevice];
+    if ([device.model isEqualToString:@"iPhone"]) {
+        NSString *numero = [NSString stringWithFormat:@"tel:%@", contatoSelecionado.telefone];
+        [self abrirApplicativoComUrl:numero];
+    } else {
+        [[[UIAlertView alloc]initWithTitle:@"Imposível fazer ligação" message:@"Seu dispositivo não é um iPhone" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+    }
+}
+
+-(void) abrirSite{
+    NSString *url = contatoSelecionado.site;
+    [self abrirApplicativoComUrl:url];
+}
+
+-(void)mostrarMapa{
+    NSString *url = [[NSString stringWithFormat:@"http://maps.google.com/maps?q=%@", contatoSelecionado.endereco]stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [self abrirApplicativoComUrl:url];
+}
+
+-(void)enviarEmail{
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *enviadorEmail = [[MFMailComposeViewController alloc]init];
+        enviadorEmail.mailComposeDelegate = self;
+        
+        [enviadorEmail setToRecipients:@[contatoSelecionado.email]];
+        [enviadorEmail setSubject:@"Caelum"];
+        
+        [self presentViewController:enviadorEmail animated:YES completion:nil];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Oops!" message:@"Não é possível enviar email" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 
 @end

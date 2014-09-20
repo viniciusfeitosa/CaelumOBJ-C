@@ -6,10 +6,11 @@
 //  Copyright (c) 2014 ios4548. All rights reserved.
 //
 
+#import <MessageUI/MFMailComposeViewController.h>
 #import <Foundation/Foundation.h>
 #import "ListaContatosProtocol.h"
 
-@interface ListaContatosViewController : UITableViewController<ListaContatosProtocol, UIActionSheetDelegate>{
+@interface ListaContatosViewController : UITableViewController<ListaContatosProtocol, UIActionSheetDelegate, MFMailComposeViewControllerDelegate>{
     Contato *contatoSelecionado;
 }
 
