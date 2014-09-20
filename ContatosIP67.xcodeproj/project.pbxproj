@@ -59,6 +59,7 @@
 		54179F6519B2137100B0AC19 /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
 		54179F6719B2459F00B0AC19 /* ListaContatosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaContatosViewController.h; sourceTree = "<group>"; };
 		54179F6819B2459F00B0AC19 /* ListaContatosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaContatosViewController.m; sourceTree = "<group>"; };
+		545C855219CDCDB600B77E3A /* ListaContatosProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListaContatosProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +130,7 @@
 				54179F6519B2137100B0AC19 /* Contato.m */,
 				54179F6719B2459F00B0AC19 /* ListaContatosViewController.h */,
 				54179F6819B2459F00B0AC19 /* ListaContatosViewController.m */,
+				545C855219CDCDB600B77E3A /* ListaContatosProtocol.h */,
 			);
 			path = ContatosIP67;
 			sourceTree = "<group>";
@@ -463,6 +465,7 @@
 				54179F5B19B1FE6100B0AC19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54179F5C19B1FE6100B0AC19 /* Build configuration list for PBXNativeTarget "ContatosIP67Tests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +474,7 @@
 				54179F5E19B1FE6100B0AC19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

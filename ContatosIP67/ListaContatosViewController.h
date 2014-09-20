@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ListaContatosProtocol.h"
 
-@interface ListaContatosViewController : UITableViewController
+@interface ListaContatosViewController : UITableViewController<ListaContatosProtocol>
 
 @property (strong) NSMutableArray *contatos;
+@property NSInteger linhaDestaque;
 
 @end

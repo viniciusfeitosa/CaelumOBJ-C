@@ -95,6 +95,10 @@
     NSLog(@"Contatos cadastrados %d", [self.contatos count]);
     
     [self.navigationController popViewControllerAnimated:YES];
+    
+    if (self.delegate) {
+        [self.delegate contatoAdicionado:contato];
+    }
 }
 
 - (Contato *)pegaDadosDoFormulario {
@@ -111,8 +115,12 @@
 }
 
 - (void)atualizaContato{
-    [self pegaDadosDoFormulario];
+    Contato *contato = [self pegaDadosDoFormulario];
     [self.navigationController popViewControllerAnimated:YES];
+    
+    if (self.delegate) {
+        [self.delegate contatoAtualizado:contato];
+    }
 }
 
 

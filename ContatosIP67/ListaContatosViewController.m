@@ -14,6 +14,7 @@
 
 - (id)init{
     self = [super self];
+    self.linhaDestaque = -1;
     if (self) {
         self.navigationItem.title = @"Contatos";
         
@@ -32,6 +33,7 @@
     
     FormularioContatoViewController *form = [[FormularioContatoViewController alloc]init];
     form.contatos = self.contatos;
+    form.delegate = self;
     
     [self.navigationController pushViewController:form animated:YES];
 }
@@ -72,7 +74,25 @@
     Contato *contato = self.contatos[indexPath.row];
     FormularioContatoViewController *form = [[FormularioContatoViewController alloc]initWithContato:contato];
     form.contatos = self.contatos;
+    form.delegate = self;
     [self.navigationController pushViewController:form animated:YES];
+}
+
+-(void)contatoAtualizado:(Contato *)contato{
+    self.linhaDestaque = [self.contatos indexOfObject:contato];
+}
+
+-(void)contatoAdicionado:(Contato *)contato{
+    self.linhaDestaque = [self.contatos indexOfObject:contato];
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    if (self.linhaDestaque >= 0){
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.linhaDestaque inSection:0];
+        [self.tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+        [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionNone animated:YES];
+        self.linhaDestaque = -1;
+    }
 }
 
 @end
